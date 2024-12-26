@@ -10,7 +10,7 @@ function Projects(){
             <p className="text-[#666666] text-[14px] sm:text-[16px] md:text-[20px] lg:text-[20px] xl:text-[24px] leading-[1.1]"> Things I&apos;ve built so far</p>
         </div>
         <div className=" w-full grid sm:grid-cols-[1fr,1fr] grid-cols-[1fr] lg:grid-cols-[1fr,1fr,1fr] auto-rows-fr gap-5">
-            <div className="bg-white max-w-[373px] w-full drop-shadow-lg rounded-lg m-auto p-5 flex flex-col gap-4 justify-between h-[-webkit-fill-available]">
+            <div className="bg-white max-w-[373px] w-full drop-shadow-lg rounded-lg m-auto p-5 flex flex-col gap-4 justify-between h-[-webkit-fill-available] hover:scale-[1.03] transition-all ease-in">
                 <div className="flex flex-col gap-4">
                 <p className="text-black font-medium text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px]">Coffee Shop</p>
                 <p className="text-[#666666] font-light text-[14px] sm:text-[16px] md:text-[18px]">This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content</p></div>
@@ -19,11 +19,11 @@ function Projects(){
                 <div className="flex justify-between text-black ">
                     <div className="flex gap-[6px] items-center text-[14px] md:text-[16px]">
                     <FontAwesomeIcon icon={faLink} />
-                    <p>Live Prevew</p>
+                    <a>Live Prevew</a>
                     </div>
                     <div className="flex gap-[6px] items-center text-[14px] md:text-[16px]">
                     <FontAwesomeIcon icon={faGithub} />
-                    <p>View Code</p>
+                    <a>View Code</a>
                     </div>
                 </div>
                 </div>
