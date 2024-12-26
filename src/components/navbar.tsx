@@ -8,7 +8,7 @@ function NavBar() {
 
   const Reff = useRef<HTMLUListElement>(null)
   const Reff2 = useRef<HTMLDivElement>(null)
-  const navClose = ():any => {
+  const navClose = () => {
     if (Reff.current && Reff2.current) {
   Reff.current.style.display = ''
   Reff.current.style.flexDirection = 'row'
@@ -22,7 +22,7 @@ function NavBar() {
 
   return (
     <div className="flex justify-between px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-[22px] items-center" ref={Reff2} >
-      <p className="text-[20px] font-bold bg-gradient-to-br from-[#13B0F5] via-[#CA24B4] bg-clip-text text-transparent leading-[0.8]" > Taha's <br /><span className="text-[18px]">Portfolio</span></p>
+      <p className="text-[20px] font-bold bg-gradient-to-br from-[#13B0F5] via-[#CA24B4] bg-clip-text text-transparent leading-[0.8]" > Taha&apos;s <br /><span className="text-[18px]">Portfolio</span></p>
       <div className="md:flex" id="navDiv">
         <ul className="md:flex gap-8 hidden" id="navUl" ref={Reff}>
           <Link href="/" onClick={navClose}><li className="hover:text-[#42446E] text-[14px] lg:text-[16px]">Home</li></Link>
