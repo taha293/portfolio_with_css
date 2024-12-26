@@ -6,7 +6,7 @@ interface Projects{
     preview?:string
     github:string
 }
-let ProjectsApi:Projects[] = [
+const ProjectsApi:Projects[] = [
     {
     key:1,
     name: "Coffee Shop",
