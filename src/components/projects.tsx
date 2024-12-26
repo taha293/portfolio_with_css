@@ -20,9 +20,10 @@ function Projects(){
             {
                 ProjectsApi.map((apis):ReactNode=>{
                     const {key,name,description,stack,preview,github} = apis
+                    
                     return(
-                        <div className="bg-white max-w-[373px] w-full drop-shadow-lg rounded-lg m-auto p-5 flex flex-col gap-4 justify-between h-[-webkit-fill-available] hover:scale-[1.04] transition-all ease-in">
-                            <p className="hidden">{key}</p>
+                        
+                        <div key = {key} className="bg-white max-w-[373px] w-full drop-shadow-lg rounded-lg m-auto p-5 flex flex-col gap-4 justify-between h-[-webkit-fill-available] hover:scale-[1.04] transition-all ease-in">
                 <div className="flex flex-col gap-4">
                 <p className="text-black font-medium text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px]">{name}</p>
                 <p className="text-[#666666] font-light text-[14px] sm:text-[16px] md:text-[18px]">{description}</p></div>
