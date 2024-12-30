@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import ProjectsApi from "./projectsapi";
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 
 
