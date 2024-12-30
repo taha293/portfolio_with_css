@@ -6,6 +6,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 import NextTopLoader from 'nextjs-toploader';
+import Footer from "@/components/footer";
 
 
 const geistSans = localFont({
@@ -41,6 +42,7 @@ export default function RootLayout({
         <NextTopLoader color="#CA24B4" />
         <NavBar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
