@@ -6,41 +6,40 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import ProjectsApi from "./projectsapi";
 import { ReactNode } from "react";
 import toast, { Toaster } from 'react-hot-toast';
-import styles from './styles/projects.module.css'
 
 
 function Projects() {
     const notify = () => toast.error('Preview for this project is not available.');
-
+     
     return (
-        <div id="projects" className={styles.projects}>
-            <div className={styles.projectshead}>
-                <p>Projects</p>
-                <span> Things I&apos;ve built so far</span>
+        <div id="projects" className="px-7 sm:px-7 md:px-9 lg:px-11 xl:px-12 py-8 md:py-10 lg:py-12 xl:py-14 flex flex-col items-center gap-12 sm:gap-14 md:gap-16 lg:gap-18 xl:gap-20">
+            <div className="text-center flex flex-col gap-[1px]">
+                <p className="text-[26px] sm:text-[28px] md:text-[30px] lg:text-[32px] xl:text-[36px] font-bold text-[#42446E]">Projects</p>
+                <p className="text-[#666666] text-[14px] sm:text-[16px] md:text-[20px] lg:text-[20px] xl:text-[24px] leading-[1.1]"> Things I&apos;ve built so far</p>
             </div>
-            <div className={styles.projectsitems} id="projectssection">
+            <div className=" w-full grid sm:grid-cols-[1fr,1fr] grid-cols-[1fr] lg:grid-cols-[1fr,1fr,1fr] auto-rows-fr gap-5" id="projectssection">
                 {
                     ProjectsApi.map((apis): ReactNode => {
                         const { key, name, description, stack, preview, github } = apis
 
                         return (
 
-                            <div key={key} className={styles.item}>
-                                <div className={styles.itemND}>
-                                    <p>{name}</p>
-                                    <span>{description}</span></div>
-                                <div className={styles.itemO}>
-                                    <p>Tech Stack : <span>{stack}</span></p>
-                                    <div className={styles.links}>
-                                        <div className={styles.linksi}>
+                            <div key={key} className="bg-white max-w-[373px] w-full drop-shadow-lg rounded-lg m-auto p-5 flex flex-col gap-4 justify-between h-[-webkit-fill-available] hover:scale-[1.04] transition-all ease-in">
+                                <div className="flex flex-col gap-4">
+                                    <p className="text-black font-medium text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px]">{name}</p>
+                                    <p className="text-[#666666] font-light text-[14px] sm:text-[16px] md:text-[18px]">{description}</p></div>
+                                <div className="flex flex-col gap-4">
+                                    <p className="text-[#42446E] text-[14px] md:text-[16px]">Tech Stack : <span className="font-light">{stack}</span></p>
+                                    <div className="flex justify-between text-black ">
+                                        <div className="flex gap-[6px] items-center text-[14px] md:text-[16px]">
                                             <FontAwesomeIcon icon={faLink} />
                                             {
                                                 preview ? <a href={preview} target="blank">Live Prevew</a> :
-                                                    <a onClick={notify} >Live Preview</a>
+                                                    <a onClick={notify} className="cursor-pointer">Live Preview</a>
                                             }
 
                                         </div>
-                                        <div className={styles.linksi}>
+                                        <div className="flex gap-[6px] items-center text-[14px] md:text-[16px]">
                                             <FontAwesomeIcon icon={faGithub} />
                                             <a href={github} target="blank">View Code</a>
                                         </div>
@@ -50,9 +49,37 @@ function Projects() {
                         )
                     })
                 }
-               
-                
-
+                <div className=" max-w-[373px] w-full drop-shadow-lg rounded-lg m-auto p-5 hidden flex-col gap-4 justify-center  h-[-webkit-fill-available] hover:scale-[1.04] transition-all ease-in lg:flex bg-[#0077B5] text-white items-center">
+                                <div className="flex flex-col gap-4">
+                                    <p className=" font-medium text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] ">Visit Linkedin</p>
+                                    <p className="text-[#666666] font-light text-[14px] sm:text-[16px] md:text-[18px]"></p></div>
+                                <div className="flex flex-col gap-4">
+                                    <div className="flex justify-between  ">
+                                        <div className="flex gap-[6px] items-center text-[14px] md:text-[16px]">
+                                            <FontAwesomeIcon icon={faLink} />
+                                            <a href='https://www.linkedin.com/in/muhammad-taha-ansarii/' target="blank">Linkedin </a>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                <div className=" max-w-[373px] w-full drop-shadow-lg rounded-lg m-auto p-5 hidden sm:flex flex-col gap-4 justify-center  h-[-webkit-fill-available] hover:scale-[1.04] transition-all ease-in bg-black text-white items-center" id="gitSect">
+                                <div className="flex flex-col gap-4">
+                                    <p className=" font-medium text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] ">Visit GitHub</p>
+                                    <p className="text-[#666666] font-light text-[14px] sm:text-[16px] md:text-[18px]"></p></div>
+                                <div className="flex flex-col gap-4">
+                                    <div className="flex justify-between  ">
+                                        <div className="flex gap-[6px] items-center text-[14px] md:text-[16px]">
+                                            <FontAwesomeIcon icon={faLink} />
+                                            <a href='https://github.com/taha293/' target="blank">Github </a>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
 
             </div>
             <Toaster
