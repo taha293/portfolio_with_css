@@ -1,0 +1,76 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 20px;
+}
+.navLogo{
+    font-weight: bold;
+    font-size: 20px;
+    background: linear-gradient(to bottom right, #13B0F5, #CA24B4);
+    background-clip: text;
+    color: transparent;
+    line-height: 0.8;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.navLogo span{
+    font-size: 18px;
+}
+.navitems ul{
+    display: none;
+    gap:32px
+}
+.navitems ul a{
+    font-size: 14px;
+}
+.navitems ul a:hover{
+    color: #42446E;
+}
+.hamburger{
+    display: flex;
+}
+.hamburgerI{
+    color: #666666;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+@media only screen and (min-width:640px){
+    .navbar{
+        padding: 22px 24px;
+    }
+}
+@media only screen and (min-width:768px){
+    .navbar{
+        padding: 22px 32px;
+    }
+    .navitems{
+        display: flex;
+    }
+    .navitems ul{
+        display: flex;
+    }
+    .hamburger{
+        display: none;
+    }
+    
+}
+@media only screen and (min-width:1024px){
+    .navbar{
+        padding: 22px 40px;
+    }
+    .navitems ul a{
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width:1280px){
+    .navbar{
+        padding: 22px 48px;
+    }
+}

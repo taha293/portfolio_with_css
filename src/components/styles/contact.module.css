@@ -1,0 +1,126 @@
+.contact{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 32px 20px;
+}
+.contacticon{
+    font-size: 150px;
+}
+.contactmain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contactmain p{
+    font-size: #42446E;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.contactmain div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.contactmain div a{
+    padding: 10px 16px;
+    border-radius: 6px;
+    color: white;
+    margin: 16px 0;
+    font-size: 14px;
+    width: 152px;
+    display: flex;
+    justify-content: center;
+}
+.linkedin{
+    background-color: #0077B5;
+}
+.linkedin:hover{
+    background-color: #2d79a1;
+}
+.gmail{
+    background-color: #D93025;
+}
+.gmail:hover{
+    background-color: #922c2c;
+}
+.fb{
+    background-color: #1877F2;
+}
+.fb:hover{
+    background-color: #2f5586;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width:640px){
+    .contact{
+        padding: 32px 28px;
+    }
+    .contacticon{
+        font-size: 175px;
+    }
+    .contactmain p{
+        font-size: 22px;
+    }
+    .contactmain div a{
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width:768px){
+    .contact{
+        padding: 40px 36px;
+    }
+    .contacticon{
+        font-size: 210px;
+    }
+    .contactmain p{
+        font-size: 24px;
+    }
+}
+@media only screen and (min-width:1024px){
+    .contact{
+        padding: 48px 44px;
+        flex-direction: row;
+        height: 72vh;
+    }
+    .contacticon{
+        font-size: 325px;
+    }
+    .contactmain{
+        display: block;
+    }
+    .contactmain p{
+        font-size: 26px;
+        text-align: justify;
+    }
+    .contactmain div a{
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width:1280px){
+    .contact{
+        padding: 56px 48px;
+        height: 80vh;
+    }
+    .contactmain p{
+        font-size: 28px;
+    }
+}
